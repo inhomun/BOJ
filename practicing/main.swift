@@ -6,6 +6,8 @@
 //
 
 import Foundation
+let N = Int(readLine()!)!
 
-print("Hello, World!")
-
+for i in 1...9{
+        print("\(N) * \(i) = \(N*i)")
+}
