@@ -1,13 +1,19 @@
 //
-//  main.swift
+//  BOJ_2753.swift
 //  practicing
 //
-//  Created by 문인호 on 2022/07/12.
+//  Created by 문인호 on 2022/07/14.
 //
 
 import Foundation
-let N = Int(readLine()!)!
 
-for i in 1...9{
-        print("\(N) * \(i) = \(N*i)")
+let testNum = Int(readLine()!)!
+
+
+if testNum % 4 == 0 && (testNum % 100 != 0 || testNum % 400 == 0) {
+    print("1")
+} else {
+    print("0")
 }
+
+
