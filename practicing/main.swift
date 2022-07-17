@@ -5,15 +5,18 @@
 //  Created by 문인호 on 2022/07/14.
 //
 
+
 import Foundation
 
-let testNum = Int(readLine()!)!
-
-
-if testNum % 4 == 0 && (testNum % 100 != 0 || testNum % 400 == 0) {
-    print("1")
-} else {
-    print("0")
+let T = Int(readLine()!)!
+for _ in 1...T{
+    let arr = readLine()!.split(separator: " ")
+    let R = Int(arr[0])!
+    let S = arr[1]
+    for num in S {
+        for _ in 1...R {
+            print("\(num)", terminator: "")
+        }
+    }
+    print("")
 }
-
-
