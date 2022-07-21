@@ -8,15 +8,6 @@
 
 import Foundation
 
-let T = Int(readLine()!)!
-for _ in 1...T{
-    let arr = readLine()!.split(separator: " ")
-    let R = Int(arr[0])!
-    let S = arr[1]
-    for num in S {
-        for _ in 1...R {
-            print("\(num)", terminator: "")
-        }
-    }
-    print("")
-}
+let ip = readLine()!.split(separator: " ").map { Int(String($0))! }
+let (A, B) = (ip[0], ip[1])
+print("\(A+B)")
