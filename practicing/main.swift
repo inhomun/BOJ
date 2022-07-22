@@ -7,15 +7,17 @@
 
 
 import Foundation
+var Num = [Int](repeating: 0, count: 9)
+var idx = 1
+var maxNum : Int! = 0
+for i in 0...8 {
+    Num[i] = Int(readLine()!)!
+}
+print(Num.max()!)
 
-let num = Int(readLine()!)!
-var result = 1
-if num == 0{
-    print(result)
+maxNum = Num.max()
+for i in 0...8{
+        if Num[i] == maxNum {
+    print(i+1)
 }
-else {
-for i in 1...num {
-    result *= i
-}
-print(result)
 }
