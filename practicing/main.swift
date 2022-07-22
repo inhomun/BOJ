@@ -8,5 +8,14 @@
 
 import Foundation
 
-var array: Array<String> = readLine()!.split(separator: " ").map{ String($0) }
-print(array.count)
+let num = Int(readLine()!)!
+var result = 1
+if num == 0{
+    print(result)
+}
+else {
+for i in 1...num {
+    result *= i
+}
+print(result)
+}
