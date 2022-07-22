@@ -8,10 +8,15 @@
 
 import Foundation
 
-let ip = readLine()!.split(separator: " ").map { Int(String($0))! }
-let cC = [1, 1, 2, 2, 2, 8]
+let ip = Int(readLine()!)!
+var P = [0, 1]
 
-for i in 0..<cC.count  {
-    print(cC[i]-ip[i], terminator: " ")
+if ip == 0||ip == 1{
+    print(P[ip])
 }
-
+else{
+for i in 2...ip {
+    P.append(P[i-2] + P[i-1])
+}
+print(P[ip])
+}
