@@ -8,13 +8,5 @@
 
 import Foundation
 
-var number = readLine()!.split(separator: " ").map{ Int(String($0))! }
-var sum : Int! = 0
-
-for i in 0...4 {
-    number[i] *= number[i]
-    sum += number[i]
-    
-}
-
-print("\(sum!%10)")
+var array: Array<String> = readLine()!.split(separator: " ").map{ String($0) }
+print(array.count)
