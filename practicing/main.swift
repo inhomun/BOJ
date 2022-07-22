@@ -8,15 +8,13 @@
 
 import Foundation
 
-let ip = Int(readLine()!)!
-var P = [0, 1]
+var number = readLine()!.split(separator: " ").map{ Int(String($0))! }
+var sum : Int! = 0
 
-if ip == 0||ip == 1{
-    print(P[ip])
+for i in 0...4 {
+    number[i] *= number[i]
+    sum += number[i]
+    
 }
-else{
-for i in 2...ip {
-    P.append(P[i-2] + P[i-1])
-}
-print(P[ip])
-}
+
+print("\(sum!%10)")
