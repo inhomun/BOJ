@@ -9,5 +9,9 @@
 import Foundation
 
 let ip = readLine()!.split(separator: " ").map { Int(String($0))! }
-let (A, B) = (ip[0], ip[1])
-print("\(A+B)")
+let cC = [1, 1, 2, 2, 2, 8]
+
+for i in 0..<cC.count  {
+    print(cC[i]-ip[i], terminator: " ")
+}
+
