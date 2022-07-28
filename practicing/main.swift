@@ -7,17 +7,23 @@
 
 
 import Foundation
-var Num = [Int](repeating: 0, count: 9)
-var idx = 1
-var maxNum : Int! = 0
-for i in 0...8 {
-    Num[i] = Int(readLine()!)!
-}
-print(Num.max()!)
 
-maxNum = Num.max()
-for i in 0...8{
-        if Num[i] == maxNum {
-    print(i+1)
+var number = readLine()!.split(separator: " ").map{ Int(String($0))! }
+
+var H = number[0]
+var M = number[1]
+
+var M1 : Int! = M-45
+
+if M1 >= 0 {
+    print("\(H) \(M1!)")
 }
+
+if M1 < 0 {
+    if H-1 < 0 {
+        print("23 \(60+M1)")
+    }
+    else {
+        print("\(H-1) \(60+M1)")
+    }
 }
