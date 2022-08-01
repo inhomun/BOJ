@@ -7,27 +7,13 @@
 
     import Foundation
 
-var M = Int(readLine()!)!
-var N = Int(readLine()!)!
-var arrNum : Array<Int> = []
-var sum : Int! = 0
-for j in M ... N {
-    for i in 1...100{
-        if j == (i*i) {
-            arrNum.append(j)
-        }
-    }
-}
+let input = readLine()!.split(separator: " ").map{ Int($0)! }
 
-if arrNum.count == 0 {
-    print(-1)
+if input == input.sorted() {
+    print("ascending")
+} else if input == input.sorted(by: >) {
+    print("descending")
+} else {
+    print("mixed")
 }
-else {
-    for i in 0..<arrNum.count{
-       sum += arrNum[i] 
-    }
-    print(sum!)
-    print(arrNum[0])
-}
-
 
