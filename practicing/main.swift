@@ -4,20 +4,42 @@
 //  Created by 문인호 on 2022/07/14.
 //
 import Foundation
-var dp = [Int](repeating: 0, count: 12)
 
-dp[1] = 1
-dp[2] = 2
-dp[3] = 4
-for i in 4..<12
-{
-    dp[i] = dp[i-3]+dp[i-2]+dp[i-1]
+var arr1 = Array(readLine()!)
+var arr2 = Array(readLine()!)
+
+var arr3 = [Int]()
+
+for i in 0..<8 {
+    arr3.append(Int(String(arr1[i]))!)
+    arr3.append(Int(String(arr2[i]))!)
 }
 
-let T = Int(readLine()!)!
-for _ in 1...T{
-    var a = Int(readLine()!)!
-    print(dp[a])
+var i = 0
+var j = 1
+
+while !(arr3.count == 2) {
+    var temp = [Int]()
+    
+    while !(j == arr3.count) {
+        let sum = arr3[i]+arr3[j]
+        if sum < 10 {
+            temp.append(Int(String(sum))!)
+        }
+        
+        else {
+            temp.append(Int(String(sum%10))!)
+        }
+        
+        i += 1
+        j += 1
+    }
+    arr3 = temp
+    i = 0
+    j = 1
 }
 
+for i in arr3 {
+    print(i, terminator: "")
+}
 
