@@ -6,12 +6,8 @@
 import Foundation
 
 let N = Int(readLine()!)!
-for _ in 1...N {
-    let strVal = readLine()!
-    if strVal.count > 5 && strVal.count < 10 {
-        print("yes")
-    }
-    else {
-        print("no")
-    }
+
+for i in 1...N/4 {
+    print("long ", terminator: "")
 }
+print("Int")
