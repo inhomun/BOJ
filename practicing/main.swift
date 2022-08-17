@@ -5,9 +5,10 @@
 //
 import Foundation
 
-let N = Int(readLine()!)!
-
-for i in 1...N/4 {
-    print("long ", terminator: "")
+func solution(_ absolutes:[Int], _ signs:[Bool]) -> Int {
+    var sum = 0
+    for (i, isPositive) in signs.enumerated(){
+        sum += isPositive ? absolutes[i] : -(absolutes[i])
+    }
+    return sum
 }
-print("Int")
